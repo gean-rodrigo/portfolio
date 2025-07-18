@@ -1,3 +1,3 @@
-# portfolio
-# Portfólio Gean Rodrigo
+# Portfolio
+# Gean Rodrigo
 https://gean-rodrigo.github.io/portfolio/
