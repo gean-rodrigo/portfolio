@@ -9,14 +9,12 @@
     
     <title>Gean Rodrigo - Portfolio Profissional</title>
     
-    <!-- External Resources -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
     
     <style>
@@ -68,23 +66,19 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-poppins">
-    <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50">
         Pular para o conteúdo principal
     </a>
 
-    <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo/Brand -->
                 <div class="flex items-center">
                     <h1 class="text-2xl md:text-3xl font-bold text-blue-800 transition-all duration-300">
                         Portfolio Profissional
                     </h1>
                 </div>
                 
-                <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8" role="navigation" aria-label="Menu principal">
                     <a href="#home" class="nav-link text-blue-800 hover:text-blue-600 font-medium transition-colors duration-300">
                         Início
@@ -103,7 +97,6 @@
                     </a>
                 </nav>
                 
-                <!-- Mobile Menu Button -->
                 <button 
                     id="menu-toggle" 
                     class="md:hidden p-2 text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg transition-colors duration-300"
@@ -117,7 +110,6 @@
             </div>
         </div>
         
-        <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200 shadow-lg">
             <nav class="px-4 py-4 space-y-2" role="navigation" aria-label="Menu mobile">
                 <a href="#home" class="mobile-nav-link block py-3 px-4 text-blue-800 font-medium rounded-lg transition-colors duration-300">
@@ -139,11 +131,8 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
         <section id="home" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
-            <!-- Background -->
             <div class="absolute inset-0 z-0">
                 <div class="hero-bg absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700"></div>
                 <div class="absolute inset-0 bg-black/40"></div>
@@ -157,7 +146,6 @@
             
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <!-- Content -->
                     <div class="lg:w-1/2 text-center lg:text-left">
                         <div class="hero-content">
                             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -172,7 +160,6 @@
                                 buscando otimizar processos e desenvolver soluções inovadoras.
                             </p>
                             
-                            <!-- CTA Buttons -->
                             <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <a href="#contact" class="btn-primary bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
                                     <i class="fas fa-envelope mr-2"></i>
@@ -186,7 +173,6 @@
                         </div>
                     </div>
                     
-                    <!-- Profile Image -->
                     <div class="lg:w-1/2 flex justify-center">
                         <div class="profile-image-container relative">
                             <div class="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl backdrop-blur-sm">
@@ -196,7 +182,6 @@
                                     <span class="sr-only">Foto de perfil de Gean Rodrigo</span>
                                 </div>
                             </div>
-                            <!-- Decorative elements -->
                             <div class="absolute -top-4 -right-4 w-8 h-8 bg-blue-300 rounded-full animate-pulse"></div>
                             <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-white rounded-full animate-pulse"></div>
                         </div>
@@ -204,7 +189,6 @@
                 </div>
             </div>
             
-            <!-- Scroll indicator -->
             <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
                 <div class="scroll-indicator animate-bounce">
                     <i class="fas fa-chevron-down text-white text-2xl"></i>
@@ -212,10 +196,8 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header -->
                 <header class="text-center mb-16">
                     <h2 class="text-4xl font-bold text-blue-800 mb-4">Sobre Mim</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
@@ -225,10 +207,8 @@
                 </header>
                 
                 <div class="grid lg:grid-cols-3 gap-12">
-                    <!-- Personal Info Sidebar -->
                     <aside class="lg:col-span-1">
                         <div class="sticky top-24 space-y-8">
-                            <!-- Contact Info Card -->
                             <div class="info-card bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg">
                                 <h3 class="text-2xl font-semibold text-blue-800 mb-6 flex items-center">
                                     <i class="fas fa-address-card mr-3"></i>
@@ -269,7 +249,6 @@
                                 </ul>
                             </div>
                             
-                            <!-- Education Card -->
                             <div class="info-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg">
                                 <h3 class="text-2xl font-semibold text-blue-800 mb-6 flex items-center">
                                     <i class="fas fa-graduation-cap mr-3"></i>
@@ -317,9 +296,7 @@
                         </div>
                     </aside>
                     
-                    <!-- Main Content -->
                     <div class="lg:col-span-2 space-y-12">
-                        <!-- Objective -->
                         <article class="content-card">
                             <h3 class="text-3xl font-semibold text-blue-800 mb-6 flex items-center">
                                 <i class="fas fa-bullseye mr-3"></i>
@@ -332,7 +309,6 @@
                             </p>
                         </article>
                         
-                        <!-- Professional Profile -->
                         <article class="content-card">
                             <h3 class="text-3xl font-semibold text-blue-800 mb-6 flex items-center">
                                 <i class="fas fa-user-tie mr-3"></i>
@@ -350,7 +326,6 @@
                             </div>
                         </article>
                         
-                        <!-- Behavioral Competencies -->
                         <article class="content-card">
                             <h3 class="text-3xl font-semibold text-blue-800 mb-8 flex items-center">
                                 <i class="fas fa-brain mr-3"></i>
@@ -400,7 +375,6 @@
             </div>
         </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -409,9 +383,7 @@
             </div>
             
             <div class="relative">
-                <!-- Timeline -->
                 <div class="space-y-8">
-                    <!-- BTS Brasil Sistemas -->
                     <div class="relative pl-8 timeline-item">
                         <div class="bg-white p-6 rounded-lg shadow-md hover-scale card-shadow">
                             <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
@@ -432,7 +404,6 @@
                         </div>
                     </div>
                     
-                    <!-- ASO Vigilância -->
                     <div class="relative pl-8 timeline-item">
                         <div class="bg-white p-6 rounded-lg shadow-md hover-scale card-shadow">
                             <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
@@ -461,7 +432,6 @@
                         </div>
                     </div>
                     
-                    <!-- Sicoob Extremo Sul -->
                     <div class="relative pl-8 timeline-item">
                         <div class="bg-white p-6 rounded-lg shadow-md hover-scale card-shadow">
                             <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
@@ -481,7 +451,6 @@
                         </div>
                     </div>
                     
-                    <!-- Sicoob Comércio -->
                     <div class="relative pl-8 timeline-item">
                         <div class="bg-white p-6 rounded-lg shadow-md hover-scale card-shadow">
                             <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
@@ -501,7 +470,6 @@
                         </div>
                     </div>
                     
-                    <!-- Supermercado Cinco Estrelas -->
                     <div class="relative pl-8 timeline-item">
                         <div class="bg-white p-6 rounded-lg shadow-md hover-scale card-shadow">
                             <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
@@ -524,8 +492,7 @@
         </div>
     </section>
 
-      <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white">
+      <section id="skills" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl md:text-5xl font-bold text-blue-800 mb-6">Habilidades Técnicas</h2>
@@ -533,7 +500,6 @@
             </div>
             
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
-                <!-- Technical Skills -->
                 <div class="fade-in">
                     <h3 class="text-2xl font-semibold text-blue-800 mb-8">Competências Técnicas</h3>
                     
@@ -600,7 +566,6 @@
                     </div>
                 </div>
                 
-                <!-- Additional Training -->
                 <div class="fade-in">
                     <h3 class="text-2xl font-semibold text-blue-800 mb-8">Formação Complementar</h3>
                     
@@ -845,7 +810,6 @@
                 </div>
             </div>
             
-            <!-- Technical Skills Grid -->
             <div class="mt-16 fade-in">
                 <h3 class="text-2xl font-semibold text-blue-800 mb-8 text-center">Tecnologias e Ferramentas</h3>
                 
@@ -903,10 +867,8 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header -->
                 <header class="text-center mb-16">
                     <h2 class="text-4xl font-bold text-blue-800 mb-4">Entre em Contato</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6"></div>
@@ -916,7 +878,6 @@
                 </header>
                 
                 <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Contact Information -->
                     <div class="contact-info">
                         <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                             <h3 class="text-2xl font-semibold text-blue-800 mb-8 flex items-center">
@@ -978,7 +939,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Social Media -->
                             <div class="mt-8 pt-8 border-t border-gray-200">
                               <div class="flex space-x-4">
                                       <h4 class="text-lg font-semibold text-blue-800 mb-4">
@@ -992,7 +952,6 @@
                         </div>
                     </div>
                     
-                    <!-- Contact Form -->
                     <div class="contact-form">
                         <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                             <h3 class="text-2xl font-semibold text-blue-800 mb-8 flex items-center">
@@ -1054,11 +1013,9 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <!-- Brand -->
                 <div class="text-center md:text-left">
                     <h3 class="text-2xl font-bold mb-4">Gean Rodrigo de Oliveira</h3>
                     <p class="text-blue-200 mb-4">Especialista em TI & Gestão Financeira</p>
@@ -1067,7 +1024,6 @@
                     </p>
                 </div>
                 
-                <!-- Quick Links -->
                 <div class="text-center">
                     <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
                     <nav class="space-y-2">
@@ -1079,7 +1035,6 @@
                     </nav>
                 </div>
                 
-                <!-- Contact Info -->
                 <div class="text-center md:text-right">
                     <h4 class="text-lg font-semibold mb-4">Contato</h4>
                     <div class="space-y-2 text-blue-200">
@@ -1092,7 +1047,6 @@
                 </div>
             </div>
             
-            <!-- Bottom Bar -->
             <div class="border-t border-blue-700 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-blue-200 text-sm mb-4 md:mb-0">
                     &copy; 2025 Gean Rodrigo de Oliveira. Todos os direitos reservados.
@@ -1115,13 +1069,11 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="back-to-top" 
             class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-110 opacity-0 invisible">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
     
     <script>
@@ -1188,8 +1140,36 @@
             
             // Add scroll event listener
             window.addEventListener('scroll', handleScrollAnimations);
+
+            // --- Mobile Menu Toggle Logic ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+
+                // Toggle icon
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />'; // Hamburger icon
+                } else {
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />'; // X icon
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+                });
+            });
+            // --- End Mobile Menu Toggle Logic ---
         });
     </script>
 </body>
 </html>
-
