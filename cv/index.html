@@ -25,9 +25,15 @@
             .cv-container {
                 box-shadow: none !important;
                 border: 1px solid #e5e7eb;
+                margin: 0;
+                width: 100%;
             }
             .no-print {
                 display: none;
+            }
+            @page {
+                size: A4;
+                margin: 0;
             }
         }
     </style>
@@ -69,14 +75,16 @@
 
             <!-- Seção de QR Codes/Imagens -->
             <section class="mb-6">
-                <!-- Usando flex-row para que as imagens fiquem lado a lado em todas as telas -->
                 <div class="flex flex-row justify-center items-center gap-4">
-                    <!-- Cada imagem ocupa metade do espaço -->
                     <div class="w-1/2 flex justify-center">
-                        <img src="https://gean-rodrigo.github.io/portfolio/cv/Linkedin.png" alt="QR Code do LinkedIn" class="rounded-lg shadow-md max-w-full h-auto w-20">
+                        <a href="https://linkedin.com/in/geanrodrigo-ti" target="_blank">
+                            <img src="https://gean-rodrigo.github.io/portfolio/cv/Linkedin.png" alt="QR Code do LinkedIn" class="rounded-lg shadow-md max-w-full h-auto w-20 hover:opacity-90 transition-opacity cursor-pointer">
+                        </a>
                     </div>
                     <div class="w-1/2 flex justify-center">
-                        <img src="https://gean-rodrigo.github.io/portfolio/cv/Portflio.png" alt="QR Code do Portfólio" class="rounded-lg shadow-md max-w-full h-auto w-20">
+                        <a href="https://gean-rodrigo.github.io/portfolio" target="_blank">
+                            <img src="https://gean-rodrigo.github.io/portfolio/cv/Portflio.png" alt="QR Code do Portfólio" class="rounded-lg shadow-md max-w-full h-auto w-20 hover:opacity-90 transition-opacity cursor-pointer">
+                        </a>
                     </div>
                 </div>
             </section>
@@ -166,8 +174,63 @@
             </section>
             
         </main>
+
+        <!-- Rodapé com botão para gerar PDF -->
+        <footer class="p-4 border-t border-gray-200 text-center no-print">
+            <button id="generate-pdf" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                Gerar PDF do Currículo
+            </button>
+            <p class="text-xs text-gray-500 mt-2">O PDF será gerado em uma única página</p>
+        </footer>
     </div>
-   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('generate-pdf');
+            
+            button.addEventListener('click', function() {
+                // Configurações para garantir que o conteúdo caiba em uma página
+                const element = document.getElementById('cv-container');
+                const options = {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    scrollX: 0,
+                    scrollY: 0,
+                    windowWidth: element.scrollWidth,
+                    windowHeight: element.scrollHeight
+                };
+
+                // Gerar PDF
+                html2canvas(element, options).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png');
+                    const pdf = new jspdf.jsPDF({
+                        orientation: 'portrait',
+                        unit: 'mm'
+                    });
+
+                    // Ajustar o PDF para A4 (210x297mm)
+                    const imgWidth = 210;
+                    const pageHeight = 297;
+                    const imgHeight = canvas.height * imgWidth / canvas.width;
+                    
+                    // Centralizar verticalmente se necessário
+                    let heightLeft = imgHeight;
+                    let position = 0;
+                    
+                    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
+
+                    // Se o conteúdo for muito grande, ajustar para caber em uma página
+                    if (heightLeft > 0) {
+                        const ratio = pageHeight / imgHeight;
+                        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight * ratio);
+                    }
+
+                    pdf.save('Curriculo-Gean-Rodrigo.pdf');
+                });
+            });
+        });
     </script>
 </body>
 </html>
